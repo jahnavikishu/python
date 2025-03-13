@@ -1,0 +1,11 @@
+a=input().lower()
+b=int(input())
+days={"sun":0,"mon":1,"tue":2,"wed":3,"thu":4,"fri":5,"sat":6}
+str_day=days[a]
+first_sund=(7-str_day)%7
+sunday=0
+dayy=first_sund
+while dayy < b:
+    sunday+=1
+    dayy+=7
+print(sunday)
