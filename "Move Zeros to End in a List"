@@ -1,0 +1,10 @@
+n=list(map(int,input().split()))
+a=[]
+b=[]
+for i in n:
+    if i!=0:
+        a.append(i)
+    else:
+        b.append(i)
+res=a+b
+print(*res)
