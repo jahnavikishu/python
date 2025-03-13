@@ -1,0 +1,11 @@
+n=input().strip()
+hel=""
+for i in n:
+    if i=='0':
+        j=i.replace('0','1')
+        hel+=j
+    else:
+        k=i.replace('1','0')
+        hel+=k
+res=int(hel,2)
+print(res)
