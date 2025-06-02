@@ -1,0 +1,27 @@
+contacts={}
+while True:
+    choice=input("which option")
+    print("\n1.add contact\n2.view all\n3.search\n4.delete\n5.exit")
+    if choice=='1':
+        name=input("name")
+        phone=input("phone")
+        contacts[name]=phone
+        print("Contact saved!")
+    elif choice=='2':
+        for name, phone in contacts.items():
+            print(f"{name}:{phone}")
+    elif choice =='3':
+        name=input("enter name to search")
+        if name in contacts:
+            print(f"{name}'s phone:{contacts[name]}")
+    elif choice=="4":
+        name=input("enter name to delte")
+        if name in contacts:
+            del contacts[name]
+            print("deleted succesfully")
+        else:
+            print("no such contacts")
+    elif choice=="5":
+        break
+    else:
+        print("invalid choice")
